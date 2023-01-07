@@ -1,0 +1,21 @@
+{
+  "name": "lambda-remote-context",
+  "version": "1.0.0",
+  "description": "Lifecycle management (RemoteContext) and wrapping (RemoteClient) for third party adapters",
+  "main": "build/index.js",
+  "types": "./types/index.d.ts",
+  "repository": {
+    "url": "https://github.com/mindlapse/lambda-remote-context.git"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "test": "jest --verbose"
+  },
+  "author": "Dave MacDonald",
+  "license": "MIT",
+  "devDependencies": {
+    "@jest/globals": "^29.3.1",
+    "jest": "^29.3.1",
+    "ts-jest": "^29.0.3"
+  }
+}
