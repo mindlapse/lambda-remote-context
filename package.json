@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Lifecycle management (RemoteContext) and wrapping (RemoteClient) for third party adapters",
   "type": "module",
+  "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./types/index.d.ts",
   "repository": {
