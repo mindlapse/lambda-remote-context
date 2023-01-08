@@ -19,7 +19,7 @@ const arc = new AliceRemoteClient({
     cleanUp: async () => console.log('do cleanup tasks')
 })
 
-const brc new BobRemoteClient({
+const brc = new BobRemoteClient({
     init: async () => console.log('do initialization work'),
     cleanUp: async () => console.log('do cleanup tasks')
 })
