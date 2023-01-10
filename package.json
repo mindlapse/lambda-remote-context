@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./types/index.d.ts",
+  "type": "module",
   "repository": {
     "url": "https://github.com/mindlapse/lambda-remote-context.git"
   },

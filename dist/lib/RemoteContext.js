@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Provides lifecycle hooks for RemoteClient instances added via addClient(client):
  *
@@ -8,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * - cleanup() which calls client.cleanUp() on each client.
  *
  */
-class RemoteContext {
+export default class RemoteContext {
     clients = [];
     /**
      * Add a client to have this RemoteContext manage initialisation and cleanup.
@@ -44,4 +42,3 @@ class RemoteContext {
         }
     };
 }
-exports.default = RemoteContext;
