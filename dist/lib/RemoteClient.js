@@ -9,16 +9,16 @@ Each RemoteClient:
 
 */
 export default class RemoteClient {
-    config;
+    lifecycle;
     client;
-    constructor(config) {
-        this.config = config;
+    constructor(lifecycle) {
+        this.lifecycle = lifecycle;
     }
     /**
      * Initialize the client
      */
     async initializeClient() {
-        this.client = await this.config.init?.();
+        this.client = await this.lifecycle.init?.();
     }
     /**
      * Get client
@@ -35,7 +35,7 @@ export default class RemoteClient {
      */
     async cleanUp() {
         if (this.client) {
-            await this.config?.cleanUp?.(this.client);
+            await this.lifecycle?.cleanUp?.(this.client);
         }
     }
 }

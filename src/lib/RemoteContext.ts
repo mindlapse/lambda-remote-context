@@ -2,11 +2,11 @@ import RemoteClient from './RemoteClient.js'
 
 /**
  * Provides lifecycle hooks for RemoteClient instances added via addClient(client):
- * 
+ *
  * - initialise() which calls client.initializeClient() on each client
- * 
+ *
  * - cleanUp() which calls client.cleanUp() on each client.
- * 
+ *
  */
 export default class RemoteContext {
     private clients: RemoteClient<any>[] = []

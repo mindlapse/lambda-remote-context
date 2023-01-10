@@ -1,4 +1,4 @@
 export interface RemoteClientConfig<T> {
-    init: () => Promise<T>;
-    cleanUp?: (client: T) => Promise<void>;
+    init: () => Promise<T>
+    cleanUp?: (client: T) => Promise<void>
 }

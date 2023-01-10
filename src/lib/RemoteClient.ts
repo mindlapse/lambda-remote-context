@@ -1,4 +1,4 @@
-import { RemoteClientConfig } from "./RemoteClientConfig.js"
+import { RemoteClientLifecycle } from './RemoteClientLifecycle'
 
 /*
 Base class for RemoteClients used with RemoteContext
@@ -11,18 +11,18 @@ Each RemoteClient:
 
 */
 export default abstract class RemoteClient<T> {
-    private config: RemoteClientConfig<T>
+    private lifecycle: RemoteClientLifecycle<T>
     private client?: T
 
-    constructor(config: RemoteClientConfig<T>) {
-        this.config = config
+    constructor(lifecycle: RemoteClientLifecycle<T>) {
+        this.lifecycle = lifecycle
     }
 
     /**
      * Initialize the client
      */
     async initializeClient() {
-        this.client = await this.config.init?.()
+        this.client = await this.lifecycle.init?.()
     }
 
     /**
@@ -40,7 +40,7 @@ export default abstract class RemoteClient<T> {
      */
     async cleanUp() {
         if (this.client) {
-            await this.config?.cleanUp?.(this.client!)
+            await this.lifecycle?.cleanUp?.(this.client!)
         }
     }
 }

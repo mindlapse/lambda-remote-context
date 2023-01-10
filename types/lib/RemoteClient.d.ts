@@ -1,8 +1,8 @@
-import { RemoteClientConfig } from "./RemoteClientConfig.js";
+import { RemoteClientLifecycle } from './RemoteClientLifecycle';
 export default abstract class RemoteClient<T> {
-    private config;
+    private lifecycle;
     private client?;
-    constructor(config: RemoteClientConfig<T>);
+    constructor(lifecycle: RemoteClientLifecycle<T>);
     /**
      * Initialize the client
      */
