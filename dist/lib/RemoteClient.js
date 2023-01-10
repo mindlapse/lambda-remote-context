@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /*
 Base class for RemoteClients used with RemoteContext
 
@@ -8,7 +10,7 @@ Each RemoteClient:
   init and cleanup of all RemoteClients
 
 */
-export default class RemoteClient {
+class RemoteClient {
     config;
     client;
     constructor(config) {
@@ -39,3 +41,4 @@ export default class RemoteClient {
         }
     }
 }
+exports.default = RemoteClient;
