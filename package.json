@@ -1,6 +1,6 @@
 {
   "name": "lambda-remote-context",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Lifecycle management (RemoteContext) and wrapping (RemoteClient) for third party adapters",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
