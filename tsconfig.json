@@ -6,7 +6,7 @@
       "declaration": true,
       "declarationDir": "./types",
       "target": "ESNext",
-      "module": "CommonJS",
+      "module": "NodeNext",
       "rootDirs": ["./src"],
       "outDir": "./dist",
       "downlevelIteration": true,
