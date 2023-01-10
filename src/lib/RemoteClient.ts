@@ -1,4 +1,4 @@
-import { RemoteClientConfig } from "./RemoteClientConfig"
+import { RemoteClientConfig } from "./RemoteClientConfig.js"
 
 /*
 Base class for RemoteClients used with RemoteContext

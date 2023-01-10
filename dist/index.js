@@ -1,2 +1,2 @@
-export { default as RemoteClient } from "./lib/RemoteClient";
-export { default as RemoteContext } from "./lib/RemoteContext";
+export { default as RemoteClient } from "./lib/RemoteClient.js";
+export { default as RemoteContext } from "./lib/RemoteContext.js";

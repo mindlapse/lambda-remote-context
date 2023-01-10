@@ -1,4 +1,4 @@
-import { RemoteClientConfig } from "./RemoteClientConfig";
+import { RemoteClientConfig } from "./RemoteClientConfig.js";
 export default abstract class RemoteClient<T> {
     private config;
     private client?;

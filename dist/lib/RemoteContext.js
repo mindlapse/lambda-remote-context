@@ -3,7 +3,7 @@
  *
  * - initialise() which calls client.initializeClient() on each client
  *
- * - cleanup() which calls client.cleanUp() on each client.
+ * - cleanUp() which calls client.cleanUp() on each client.
  *
  */
 export default class RemoteContext {
