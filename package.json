@@ -1,16 +1,22 @@
 {
   "name": "lambda-remote-context",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Lifecycle management (RemoteContext) and wrapping (RemoteClient) for third party adapters",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./types/index.d.ts",
   "type": "module",
   "repository": {
     "url": "https://github.com/mindlapse/lambda-remote-context.git"
   },
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+        "import": "./dist/mjs/index.js",
+        "require": "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc --declaration",
+    "build": "rm -fr dist/* && tsc -p tsconfig-mjs.json && tsc -p tsconfig-cjs.json && ./scripts/fixup.sh",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose"
   },
   "author": "Dave MacDonald <mastodon.solar@proton.me>",
