@@ -1,4 +1,4 @@
-import { RemoteClientLifecycle } from './RemoteClientLifecycle';
+import { RemoteClientLifecycle } from './RemoteClientLifecycle.js';
 export default abstract class RemoteClient<T> {
     private lifecycle;
     private client?;

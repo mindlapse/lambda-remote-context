@@ -9,8 +9,6 @@ Each RemoteClient:
 
 */
 export default class RemoteClient {
-    lifecycle;
-    client;
     constructor(lifecycle) {
         this.lifecycle = lifecycle;
     }

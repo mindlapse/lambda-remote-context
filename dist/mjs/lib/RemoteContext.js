@@ -7,7 +7,21 @@
  *
  */
 export default class RemoteContext {
-    clients = [];
+    constructor() {
+        this.clients = [];
+        this.runAllThrowFirst = async (onClient) => {
+            // Collect cleanup ops
+            const ops = this.clients.map((client) => onClient(client));
+            // Execute all and wait until all cleanup ops are complete
+            const outcomes = await Promise.allSettled(ops);
+            // Verify all cleanups were successful, otherwise throw
+            for (let outcome of outcomes) {
+                if (outcome.status === 'rejected') {
+                    throw outcome.reason;
+                }
+            }
+        };
+    }
     /**
      * Add a client to have this RemoteContext manage initialisation and cleanup.
      * (chainable method)
@@ -29,16 +43,4 @@ export default class RemoteContext {
     async cleanUp() {
         await this.runAllThrowFirst((client) => client.cleanUp());
     }
-    runAllThrowFirst = async (onClient) => {
-        // Collect cleanup ops
-        const ops = this.clients.map((client) => onClient(client));
-        // Execute all and wait until all cleanup ops are complete
-        const outcomes = await Promise.allSettled(ops);
-        // Verify all cleanups were successful, otherwise throw
-        for (let outcome of outcomes) {
-            if (outcome.status === 'rejected') {
-                throw outcome.reason;
-            }
-        }
-    };
 }

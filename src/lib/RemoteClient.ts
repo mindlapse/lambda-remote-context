@@ -1,4 +1,4 @@
-import { RemoteClientLifecycle } from './RemoteClientLifecycle'
+import { RemoteClientLifecycle } from './RemoteClientLifecycle.js'
 
 /*
 Base class for RemoteClients used with RemoteContext

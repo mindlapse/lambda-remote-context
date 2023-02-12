@@ -1,6 +1,6 @@
 import { expect, jest, describe, it, beforeEach } from '@jest/globals'
-import RemoteClient from '../src/lib/RemoteClient'
-import { RemoteClientLifecycle } from '../src/lib/RemoteClientLifecycle'
+import RemoteClient from '../src/lib/RemoteClient.js'
+import { RemoteClientLifecycle } from '../src/lib/RemoteClientLifecycle.js'
 
 class ThirdPartyClient {}
 
